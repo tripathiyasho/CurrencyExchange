@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  font-family: "Plain Light";
+  color: white;
+  }
+  
+  html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body::-webkit-scrollbar { 
+  display: none; 
+}
+  
+  .main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0b0b0b;
+  }
+  .container {
+    background-color: #151515;
+    padding: 2rem;
+    border-radius: 1rem;
+    min-height: 65vh;
+    width: 60vh;
+  }
+
+  .container h1 {
+    text-transform: uppercase;
+  }
+  
+  form {
+    margin: 2rem 0 1rem 0;
+  }
+  
+  form select,
+  button,
+  input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 0.75rem;
+  }
+  
+  form input {
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 1rem;
+    height: 3rem;
+    padding-left: 0.5rem;
+    margin-top: 1rem;
+    color: #0b0b0b;
+  }
+  
+  .dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  .dropdown i {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .select-container img {
+
+    max-width: 3.8rem;
+  }
+  
+  .select-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    border-radius: 0.5rem;
+    border: 1px solid lightgray;
+    margin-top: 15px;
+    
+  }
+
+  .dropdown p {
+    padding-left: 60px;
+  }
+  
+  .select-container select {
+    font-size: 1.7rem;
+    width: auto;
+    color: black;
+  }
+  
+  .select-container select option {
+    color: #0b0b0b;
+  }
+  .msg {
+    margin: 2rem 0 2rem 6.8rem;
+  }
+  
+  form button {
+    height: 3rem;
+    background-color: #e163c3;
+    color: #fff;
+    font-size: 1.15rem;
+    cursor: pointer;
+  }
+
+  /* loading animation */
+
+  #loader {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: #0b0b0b;
+    padding: 15vh 5.4vw;
+  }
+  
+  .line {
+    /* background-color: red; */
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2vw;
+    line-height: 1.1;
+  }
+  #line2 {
+    /* background-color: red; */
+    opacity: 1;
+    font-family: "silk serif";
+    width: 9vw;
+    margin: 8vh 23vw;
+    font-weight: 100;
+    font-size: 1.43vw;
+  }
+  #line-p1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* background-color: bisque; */
+    width: 20vw;
+    height: 15vh;
+  }
+  
+  #line-p1 #h5,
+  #line-p1 #h6 {
+    font-size: 3.1vw;
+    font-family: "silk serif";
+    font-weight: 100;
+  }
+  #line-p1 #h5 {
+    /* background-color: aquamarine; */
+    text-align: right;
+  }
+  
+  .line h1 {
+    text-transform: uppercase;
+    /* background-color: red; */
+    font-size: 7.3vw;
+    font-weight: 600;
+  }
+  
+  h1 {
+    position: relative; /* Ensure relative positioning for the h2 to be placed properly */
+    display: inline-flex;
+    align-items: center;
+  }
+  /* Static part */
+  .static-text {
+    text-transform: uppercase;
+    font-size: 7.3vw;
+    font-weight: 600;
+    color: #fff;
+  }
+  #h2 {
+    position: absolute;
+    left: calc(100% + 2vw);
+    text-transform: uppercase;
+    font-size: 7.3vw;
+    font-weight: 600;
+    animation-name: anime;
+    animation-duration: 1.3s;
+    opacity: 0;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes anime {
+    0% {
+      font-family: "plain light";
+      -webkit-text-stroke: 1px #fff;
+      color: #fff;
+      font-weight: 600;
+      opacity: 0;
+    }
+    49% {
+      font-family: "plain light";
+      -webkit-text-stroke: 1px #fff;
+      color: #fff;
+      font-weight: 600;
+      opacity: 1;
+    }
+    50% {
+      font-family: "silk serif";
+      -webkit-text-stroke: 1px #fff;
+      color: transparent;
+      font-weight: 500;
+      opacity: 0;
+    }
+    100% {
+      font-family: "silk serif";
+      -webkit-text-stroke: 1px #fff;
+      color: transparent;
+      font-weight: 500;
+      opacity: 1;
+    }
+  }
